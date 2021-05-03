@@ -376,7 +376,7 @@
             //pdf.text(20, 20, "DATOS DE PACIENTES: ");
             var bodytab = document.getElementById("datatable");
             var tabjson = pdf.autoTableHtmlToJson(bodytab);
-            var headerTxt = "                       REPORTE GENERAL DE PACIENTES"
+            var headerTxt = "                       REPORTE GENERAL DE DOCTORES"
             var header = function (data) {
                 pdf.setFontSize(18);
                 pdf.setTextColor(10);
@@ -390,7 +390,7 @@
                 startY: pdf.autoTableEndPosY() + 15
             };
             pdf.autoTable(tabjson.columns, tabjson.data, options);
-            pdf.save('REPORTE_doctores.pdf');
+            pdf.save('REPORTE_VISUAL_doctores.pdf');
         }
     </script>
 
