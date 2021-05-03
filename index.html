@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <title>UHospital 202000194</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/animate.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/tooplate-style.css">
+
+</head>
+
+<body onload="iniciararrayenfermedades()" id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+
+          </div>
+     </section>
+
+
+     <!-- HEADER -->
+     <header>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-5">
+                         <p>BIENVENIDO A UHOSPITAL (Salud para todos)</p>
+                    </div>
+
+                    <div class="col-md-8 col-sm-7 text-align-right">
+                         <span class="phone-icon"><i class="fa fa-phone"></i>+502 57707472</span>
+                         <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 6:00 AM - 10:00 PM
+                              (Lunes-Viernes)</span>
+                         <span class="email-icon"><i class="fa fa-envelope-o"></i> <a
+                                   href="#">3034161730108@ingenieria.usac.edu.gt</a></span>
+                    </div>
+
+               </div>
+          </div>
+     </header>
+
+
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="index.html" class="navbar-brand"><i class="fa fa-h-square"></i>OSPITAL USAC</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="#top" class="smoothScroll">INICIO</a></li>
+                         <li><a href="#about" class="smoothScroll">Sobre nosotros</a></li>
+                         <li><a href="#team" class="smoothScroll">Iniciar Sesión</a></li>
+                         <li><a href="#news" class="smoothScroll">Covid 19</a></li>
+                         <li><a href="#google-map" class="smoothScroll">Contacto</a></li>
+                         <li class="appointment-btn"><a href="#registro">Registrarse</a></li>
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- HOME -->
+     <section id="home" class="slider" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="owl-carousel owl-theme">
+                         <div class="item item-first">
+                              <div class="caption">
+                                   <div class="col-md-offset-1 col-md-10">
+                                        <h3>Permitenos hacer tu vida más feliz</h3>
+                                        <h1>UHOSPITAL</h1>
+                                        <a href="#team" class="section-btn btn btn-default smoothScroll">INICIO DE
+                                             SESIÓN</a>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="item item-second">
+                              <div class="caption">
+                                   <div class="col-md-offset-1 col-md-10">
+                                        <h1>Nuestra Misión</h1>
+                                        <h3>Ser un hospital responsable de brindar atención integral de salud, con
+                                             calidez y calidad a
+                                             universitarios y población en general, mediante la promoción de la salud,
+                                             prevención de enfermedades,
+                                             recuperación y rehabilitación de las personas, contando con recursos
+                                             humanos calificados y tecnología
+                                             moderna para el mejoramiento de la calidad de vida de todas las personas.
+                                        </h3>
+
+                                        <a href="#about" class="section-btn btn btn-default btn-gray smoothScroll">Más
+                                             sobre nosotros</a>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="item item-third">
+                              <div class="caption">
+                                   <div class="col-md-offset-1 col-md-10">
+                                        <h1>Nuestra Visión</h1>
+                                        <h3>Ser el hospital líder a nivel nacional, comprometido a brindar atención
+                                             especializada e integral de servicios
+                                             de salud, mediante un sistema certificado de gestión de calidad de la
+                                             Facultad de Medicina, siendo personal
+                                             calificado, contando con tecnología moderna y pertinente, orientada a
+                                             satisfacer las necesidades y expectativas
+                                             de todos los usuarios.</h3>
+
+                                        <a href="#news" class="section-btn btn btn-default btn-blue smoothScroll">Ver
+                                             sobre COVID 19</a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- TODO:ACERCA DE  -->
+     <section id="about">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <div class="about-info">
+                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Bienvenido a U<i
+                                        class="fa fa-h-square"></i>ospital</h2>
+                              <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                   <p>Somos un hospital ubicado en la Universidad de San Carlos de Guatemala, 11
+                                        Avenida, Cdad. de Guatemala
+                                        01012. Desarrollado en base a la filosofía de sus fundadores la cual se
+                                        compromete a brindar una cálida
+                                        atención humana y equipamientos e insumos de alta calidad, todos estos elementos
+                                        se integran con el objeto
+                                        de no poner en riesgo la salud del paciente.
+                                        Su diseño y equipamiento cumple con los requerimientos necesarios para obtener
+                                        la certificación
+                                        internacional de hospitales.</p>
+                              </div>
+                              <figure class="profile wow fadeInUp" data-wow-delay="1s">
+                                   <img src="images/author-image.jpg" class="img-responsive" alt="">
+                                   <figcaption>
+                                        <h3>Dr. Alvaro Socop</h3>
+                                        <p>General Principal</p>
+                                   </figcaption>
+                              </figure>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- //TODO: INICIO DE SESIÓN -->
+     <section id="team" data-stellar-background-ratio="1">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6A col-sm-6">
+                         <div class="about-info">
+                              <h2 class="wow fadeInUp" data-wow-delay="0.1s">INICIO DE SESIÓN: </h2>
+                         </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="wow fadeInUp" data-wow-delay="0.8s">
+                         <div class="col-md-6A ">
+                              <label for="usuario">                                               Usuario</label>
+                              <input type="usuario" class="form-control" id="user" name="Usuario"
+                                   placeholder="Ingresa tu Usuario">
+                         </div>
+
+                         <div class="col-md-6A ">
+                              <label for="contra">                                         Contraseña</label>
+                              <input type="password" class="form-control" id="contra" name="Contraseña"
+                                   placeholder="Escribe tu Contraseña">
+                         </div>
+                         <div onclick="ObtenerUsuario()" class="section-btn2 btn  smoothScroll">
+                              <a href="#appointment">Iniciar Sesión</a>
+                         </div>
+
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- //TODO: PREVENCION COVID  -->
+     <section id="news" data-stellar-background-ratio="2.5">
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                         <!-- SECTION TITLE -->
+                         <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                              <h2>Medidas de Prevención Covid 19</h2>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <a href="news-detail.html">
+                                   <img src="images/lavar.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>Medida 1</span>
+                                   <h3><a href="news-detail.html">Lavarse las manos</a></h3>
+                                   <p>Debes lavarte las manos frecuentemente y mas cuando sales a la calle.</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+                              <a href="news-detail.html">
+                                   <img src="images/saludar.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>Medida 2</span>
+                                   <h3><a href="news-detail.html">Evitar saludar</a></h3>
+                                   <p>Debes evitar el saludo de mano, de beso y abrazo con las personas.</p>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+                              <a href="news-detail.html">
+                                   <img src="images/desinfectante.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>Medida 3</span>
+                                   <h3><a href="news-detail.html">Usar desinfectante</a></h3>
+                                   <p>Debes utilizar desinfectante a base de alcohol con concentración entre 60% y 80%.
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <a href="news-detail.html">
+                                   <img src="images/nariz.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>Medida 4</span>
+                                   <h3><a href="news-detail.html">Cubrir nariz y boca</a></h3>
+                                   <p>Debes cubrir nariz y boca al estornudar y toser, usando siempre la mascarilla bien
+                                        puesta.</p>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+                              <a href="news-detail.html">
+                                   <img src="images/superficie.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>Medida 5</span>
+                                   <h3><a href="news-detail.html">Desinfectar</a></h3>
+                                   <p>Debes desinfectar superficies de contacto frecuentemente usando solución clorada
+                                        (cloro).</p>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+                              <a href="news-detail.html">
+                                   <img src="images/alimentos.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>Medida 5</span>
+                                   <h3><a href="news-detail.html">Lavar Alimentos</a></h3>
+                                   <p>Debes lavar los alimentos que compres en el mercado y trata de no consumirlos
+                                        hasta que llegues a casa.</p>
+                              </div>
+                         </div>
+                    </div>
+
+
+
+
+
+               </div>
+          </div>
+     </section>
+     <!-- FIN PREVENCIÓN DEL COVID  -->
+
+
+     <!-- TODO:REGISTRO DE PACIENTE-->
+     <section id="registro" data-stellar-background-ratio="3">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <img src="images/appointment-image.jpg" class="img-responsive" alt="">
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- REGISTRO -->
+                         <form id="appointment-form" role="form" method="post" action="#">
+
+                              <!-- SECTION TITLE -->
+                              <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                                   <h2>REGISTRATE</h2>
+                              </div>
+
+                              <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="name">Nombre</label>
+                                        <input type="text" class="form-control" id="nombre" name="name"
+                                             placeholder="Ingresa tu Nombre">
+                                   </div>
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="lastname">Apellido</label>
+                                        <input type="text" class="form-control" id="lastname" name="lastname"
+                                             placeholder="Ingresa tu apellido">
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="usuario">Nombre de Usuario</label>
+                                        <input type="text" class="form-control" id="usuario" name="usuario"
+                                             placeholder="Ingresa tu Nombre de Usuario">
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="date">Fecha de Nacimiento</label>
+                                        <input type="date" name="date" value="" id="date" class="form-control">
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="select">Sexo</label>
+                                        <select id="sexo" class="form-control">
+                                             <option value="0">Masculino</option>
+                                             <option value="1">Femenino</option>
+                                        </select>
+                                   </div>
+
+                                   <div class="col-md-12 col-sm-12">
+                                        <label for="password">Contraseña</label>
+                                        <input type="password" class="form-control" id="password" name="password"
+                                             placeholder="Ingresa tu Contraseña">
+                                        <label for="Message">Mensaje adicional (Opcional)</label>
+                                        <textarea class="form-control" rows="5" id="message" name="message"
+                                             placeholder="Message"></textarea>
+                                        <p></p>
+                                        <button onclick="registrousuario()" type="button" class="form-control"
+                                             id="registrar">Registrarse</button>
+
+                                   </div>
+
+                              </div>
+                         </form>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- TODO:GOOGLE MAP -->
+     <section id="google-map">
+          <!-- How to change your own map point
+            1. Go to Google Maps
+            2. Click on your location point
+            3. Click "Share" and choose "Embed map" tab
+            4. Copy only URL and paste it within the src="" field below
+	-->
+          <iframe
+               src="https://maps.google.com/maps?width=100%25&amp;height=1490&amp;hl=en&amp;q=San%20Carlos%20University+(Universidad%20de%20San%20Carlos%20de%20Guatemala)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+               width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+     </section>
+
+
+     <!-- FOOTER -->
+     <footer data-stellar-background-ratio="5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contáctenos</h4>
+                              <p>202000194</p>
+
+                              <div class="contact-info">
+                                   <p><i class="fa fa-phone"></i> +502 57707472</p>
+                                   <p><i class="fa fa-envelope-o"></i> <a
+                                             href="#">3034161730108@ingenieria.usac.edu.gt</a></p>
+                              </div>
+                         </div>
+                    </div>
+                    <!--
+                    <div class="col-md-4 col-sm-4"> 
+                         <div class="footer-thumb"> 
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Ultimas Actualizaciones</h4>
+                              <div class="latest-stories">
+                                   <div class="stories-image">
+                                        <a href="#"><img src="images/news-image.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="stories-info">
+                                        <a href="#"><h5>Amazing Technology</h5></a>
+                                        <span>March 08, 2018</span>
+                                   </div>
+                              </div>
+
+                              <div class="latest-stories">
+                                   <div class="stories-image">
+                                        <a href="#"><img src="images/news-image.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="stories-info">
+                                        <a href="#"><h5>New Healing Process</h5></a>
+                                        <span>February 20, 2018</span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    -->
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <div class="opening-hours">
+                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">Horario de Atención</h4>
+                                   <p>Lunes - Viernes <span>06:00 AM - 10:00 PM</span></p>
+                                   <p>Sabado <span>09:00 AM - 08:00 PM</span></p>
+                                   <p>Domingo <span>Cerrado, es dia de Dios</span></p>
+                              </div>
+
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-4 col-sm-6">
+                              <div class="copyright-text">
+                                   <p>Copyright &copy; 2022 UHospital
+
+                                        | Diseño: El Bootstrap :v</p>
+                              </div>
+                         </div>
+                         <div class="col-md-6 col-sm-6">
+                              <div class="footer-link">
+                                   <a href="https://www.who.int/es">OMS</a>
+                                   <a href="https://www.mspas.gob.gt">MSPAS</a>
+                                   <a href="https://www.gob.pe/minsa/">MINSA</a>
+                                   <a href="https://covid19.who.int">COVID 19 INFO</a>
+                              </div>
+                         </div>
+                         <div class="col-md-2 col-sm-2 text-align-center">
+                              <div class="angle-up-btn">
+                                   <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i
+                                             class="fa fa-angle-up"></i></a>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </footer>
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.sticky.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/wow.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/custom.js"></script>
+
+     <!--INICIALIZAR EL SESSIONSTORAGE ARRAY DE LAS ENFERMEDADES PARA NO BORRAR SUS VALORES-->
+     <script>
+           
+          function iniciararrayenfermedades(){
+               var ola = sessionStorage.getItem("oopp")
+             console.log(ola)
+               if(ola!="1"){
+                    //SE INICIALIZA EL ARRAYENFERMEDAD
+                    var inicioarray=[]
+                    sessionStorage.setItem("arrayenfermedad",JSON.stringify(inicioarray))
+                    console.log(ola)
+                    console.log("SE INICIALIZÓ EL ARRAYENFERMEDAD")
+                     
+                    //SE INICIALIZA EL ARRAYDOCTORES
+                    var inicioarray2=[]
+                    sessionStorage.setItem("arraydoctores",JSON.stringify(inicioarray2))
+                    console.log(ola)
+                    console.log("SE INICIALIZÓ EL ARRAYDOCTORES")
+                    sessionStorage.setItem("idecita",0)
+                    //SE INICIALIZA EL ARRAYMEDICINAS
+                    var inicioarray3=[]
+                    sessionStorage.setItem("arraymedicina",JSON.stringify(inicioarray3))
+                    console.log(ola)
+                    console.log("SE INICIALIZÓ EL ARRAYMEDICINAS")
+                   
+                     
+                    ola="1"
+                    sessionStorage.setItem("oopp",ola)
+                    
+                    //storage.removeItem("oopp");
+               }
+             //  sessionStorage.removeItem("oopp");
+          }
+
+     </script>
+     <!-- INICIO DE SESION -->
+     <script>
+          var sino =true
+          
+          function ObtenerUsuario(){
+           var usuarioingresado = document.querySelector('#user').value
+           var contraseñaingresada = document.querySelector('#contra').value
+           console.log(usuarioingresado,contraseñaingresada) 
+           //sino=true
+           if (usuarioingresado == "" || contraseñaingresada == "") {
+                         alert("Por favor llene todos los campos.")
+                    } else {
+           if (((usuarioingresado=="Admin")||(usuarioingresado=="admin")||(usuarioingresado=="ADMIN"))&&((contraseñaingresada=="1234"||(contraseñaingresada=="admin")||(contraseñaingresada=="ADMIN")))){
+               sino=false 
+               alert("BIENVENIDO:  Abner Cardona")
+               iniciarsesionAdmin()
+           }else{
+           
+           //BUSCO EN LOS PACIENTES LOGEADOS DEL BACKEND
+           fetch(`https://backend-202000194.herokuapp.com/Pacientes/login/${usuarioingresado}`, {
+           method: 'GET',
+           headers:{
+               'Content-Type': 'application/json',
+               'Access-Control-Allow-Origin': '*',}})
+           .then(res => res.json())
+           .catch(err => {
+               console.error('Error:', err)
+               //alert("Ocurrio un error, ver la consola")
+           })
+           .then(response =>{
+               console.log(response.Username)
+               var Userfound = response.Username
+               var Passfound = response.Contra
+               var nombre=response.Nombre
+               var ape=response.Apellido
+               var tipado = response.tipo 
+               if((Userfound!=undefined) || (Passfound!=undefined)){
+               console.log("El tipo de usuario es:   "+tipado)
+               sessionStorage.setItem("logpaciente", nombre)
+               console.log(Userfound,"   y   ",Passfound,nombre,ape)
+               sino=false
+               if ((Userfound==usuarioingresado) && (Passfound==contraseñaingresada)){
+                    sino=false
+                    alert('BIENVENIDO   '+ nombre+ '   '+response.Apellido)
+                    iniciarsesion0(Userfound,Passfound)
+                    
+               }else{
+                         messageno()
+                    }
+          }
+
+           })
+           
+           //BUSCO EN LOS DOCTORES LOGEADOS DEL BACKEND
+           fetch(`https://backend-202000194.herokuapp.com/Doctores/login/${usuarioingresado}`, {
+           method: 'GET',
+           headers:{
+               'Content-Type': 'application/json',
+               'Access-Control-Allow-Origin': '*',}})
+           .then(res => res.json())
+           .catch(err => {
+               console.error('Error:', err)
+               //alert("Ocurrio un error, ver la consola")
+           })
+           .then(response =>{
+               console.log(response.Username)
+               var Userfound = response.Username
+               var Passfound = response.Contra
+               var nombre=response.Nombre
+               var ape=response.Apellido
+               var tipado = response.tipo 
+               if((Userfound!=undefined) || (Passfound!=undefined)){
+                    console.log("El tipo de usuario es:   "+tipado)
+                    sessionStorage.setItem("logdoctor", nombre)
+
+                    console.log(Userfound,"   y   ",Passfound,nombre,ape)
+
+                    if ((Userfound==usuarioingresado) && (Passfound==contraseñaingresada)){
+                         alert('BIENVENIDO DOCTOR   '+ nombre+ '   '+response.Apellido)
+                         iniciarsesion1(Userfound,Passfound)
+                         sino=false
+                         sessionStorage.setItem("doclogeado",Userfound)
+
+                    }else{
+                         messageno()
+                    }
+               }
+
+           })
+           
+             //BUSCO EN LAS ENFERMERAS LOGEADOS DEL BACKEND
+             fetch(`https://backend-202000194.herokuapp.com/Enfermeras/login/${usuarioingresado}`, {
+           method: 'GET',
+           headers:{
+               'Content-Type': 'application/json',
+               'Access-Control-Allow-Origin': '*',}})
+           .then(res => res.json())
+           .catch(err => {
+               console.error('Error:', err)
+               //alert("Ocurrio un error, ver la consola")
+           })
+           .then(response =>{
+               console.log(response.Username)
+               var Userfound = response.Username
+               var Passfound = response.Contra
+               var nombre=response.Nombre
+               var ape=response.Apellido
+               var tipado = response.tipo 
+               if((Userfound!=undefined) || (Passfound!=undefined)){
+                    console.log("El tipo de usuario es:   "+tipado)
+                    sessionStorage.setItem("logenfermera", nombre)
+                    console.log(Userfound,"   y   ",Passfound,nombre,ape)
+
+                    if ((Userfound==usuarioingresado) && (Passfound==contraseñaingresada)){
+                         alert('BIENVENIDA ENFERMERA:   '+ nombre+ '   '+response.Apellido)
+                         iniciarsesion2(Userfound,Passfound)
+                         
+                    }else{
+                         messageno()
+                    }
+               }
+
+           })
+        
+     }//finelse
+     
+}//finelse de campos vacios
+   
+  //LOGIN TERMINADO FIN LOGIN :V
+  
+
+}
+     function messageno(){
+          alert("No se encontró en el sistema! Verifique sus datos.")
+     }
+       
+       //FUNCIONES PARA CAMBIAR DE PAGINA HTML DEPENDIENDO DEL USER LOGEADO
+       function iniciarsesionAdmin(){
+          location.href = "Panel_Admin.html"
+
+       } 
+       function iniciarsesion0(user,pass){
+          location.href = "Panel_Paciente.html"
+
+       }
+       function iniciarsesion1(user,pass){
+          location.href = "Panel_Doc.html"
+
+       }
+       function iniciarsesion2(user,pass){
+          location.href = "Panel_Nurse.html"
+
+       }
+       //FUNCIONES PARA REGRESAR AL MODULO ADMINISTRADOR (NO SE USA PERO BUENO :V)
+       function regresaradmin(){
+         location.href = "Panel_Admin.html"
+       }
+    </script>
+
+
+     <!-- REGISTRO DE USUARIOS  -->
+     <Script>
+          function registrousuario() {
+
+               var nombre = document.querySelector('#nombre').value
+               var lastname = document.querySelector('#lastname').value
+               var usuario = document.querySelector('#usuario').value
+               var date = document.querySelector('#date').value
+               var sexoption = document.getElementById('sexo')
+               if (sexoption.value == 0) {
+                    var sexo = "M"
+               }
+               if (sexoption.value == 1) {
+                    var sexo = "F"
+               }
+
+               var password = document.querySelector('#password').value
+               var message = document.querySelector('#message').value
+               if (password.length >= 8) {
+                    if (nombre == "" || lastname == "" || usuario == "" || date == "" || password == "") {
+                         alert("Por favor llene todos los campos.")
+                    } else {
+
+                         var objeto = {
+                              'Nombre': nombre.replace(/ /g, ""),
+                              'Apellido': lastname,
+                              'Fecha': date,
+                              'Sexo': sexo,
+                              'Usuario': usuario,
+                              'Contraseña': password
+                         }
+                         console.log(objeto)
+                         // ████████████████████████████        FETCH      ████████████████████████
+                         fetch('https://backend-202000194.herokuapp.com/Pacientes', {
+                              method: 'POST',
+                              body: JSON.stringify(objeto),
+                              headers: {
+                                   'Content-Type': 'application/json',
+                                   'Access-Control-Allow-Origin': '*',
+                              }
+                         })
+                              .then(res => res.json())
+                              .catch(err => {
+                                   console.error('Error:', err)
+                                   alert("Ocurrio un error, ver la consola")
+                              })
+                              .then(response => {
+
+                                   console.log(response);
+                                   alert(response.Mensaje)
+                                   // ObtenerDatos()
+                              })
+                    
+
+
+              
+
+
+
+
+                          alert("Se ha registrado con éxito")
+
+               
+          }}else { alert("Por favor ingrese una contraseña con al menos 8 caracteres.") }
+     }
+
+
+     </Script>
+
+</body>
+
+</html>

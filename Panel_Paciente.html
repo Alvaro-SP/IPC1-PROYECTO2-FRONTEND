@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <title>UHospital Paciente</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <!-- Fontfaces CSS-->
+     <link href="css/font-face.css" rel="stylesheet" media="all">
+     <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+     <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/animate.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/tooplate-style.css">
+     <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+     <!-- Vendor CSS-->
+     <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+     <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+     <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+     <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+     <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+     <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+     <!-- Main CSS-->
+     <link href="css/theme.css" rel="stylesheet" media="all">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+</head>
+
+<body onload="ObtenerDatos()" id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+
+          </div>
+     </section>
+
+     <!-- HEADER -->
+     <header>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-5">
+                         <p>BIENVENIDO A UHOSPITAL (Salud para todos)</p>
+                    </div>
+
+                    <div class="col-md-8 col-sm-7 text-align-right">
+                         <span class="phone-icon"><i class="fa fa-phone"></i> 57707472</span>
+                         <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 6:00 AM - 10:00 PM
+                              (Lunes-Viernes)</span>
+                         <span class="email-icon"><i class="fa fa-envelope-o"></i> <a
+                                   href="#">3034161730108@ingenieria.usac.edu.gt</a></span>
+                    </div>
+
+               </div>
+          </div>
+     </header>
+     <button onclick="Regresar()" type="button" class="btn btn-primary btn-lg" data-toggle="button" aria-pressed="false"
+          autocomplete="off" style="position: right;">CERRAR SESIÓN</button>
+
+     <!-- TITULO NO MAS -->
+     <div id="tittlepaciente" class="col-md-12 col-sm-12">
+
+     </div>
+     <!-- TODO:HACER UNA CITA-->
+     <section id="appointment" data-stellar-background-ratio="3">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <img src="images/enfermeracita.png" width="650" height="500" class="img-responsive" alt="">
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- CONTACT FORM HERE -->
+                         <form id="appointment-form" role="form" method="post" action="#">
+
+                              <!-- SECTION TITLE -->
+                              <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                                   <h2>Realiza una Cita:</h2>
+                              </div>
+
+                              <div class="wow fadeInUp" data-wow-delay="0.8s">
+
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="date">Select Date</label>
+                                        <input type="date" id="date" name="date" value="" class="form-control">
+                                        <label for="telephone">Hora:</label>
+                                        <input type="time" class="form-control" id="hour" placeholder="Horario">
+                                   </div>
+
+
+                                   <div class="col-md-12 col-sm-12">
+
+                                        <label for="Message">Motivo de la Cita:</label>
+                                        <textarea id="motivo" class="form-control" rows="5" id="message" name="message"
+                                             placeholder="Ingrese el motivo de la cita"></textarea>
+                                        <button onclick="HacerCita()" type="button" class="form-control" id="cf-submit"
+                                             name="submit">--SOLICITAR--</button>
+
+                                   </div>
+                              </div>
+                         </form>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+     <h2>ESTADO DE LA CITA:</h2>
+     <div id="EstadoCita">
+
+
+     </div>
+     <!--SECCION QUE MUESTRA LAS MEDICINAS-->
+     <section>
+
+          <!-- TITULO NO MAS -->
+          <div class="col-md-12 col-sm-12">
+               <!-- SECTION TITLE -->
+               <div>
+
+
+               </div>
+          </div>
+
+
+          <button onclick="EstadodeCita()" type="button" class="btn btn-primary btn-lg"
+               style="position: relative;">Actualizar</button>
+
+
+     </section>
+
+
+     <!--VISUALIZACIÓN PACIENTES DOCTORES Y ENFERMERAS Y MEDICINAS -->
+     <section id="team" data-stellar-background-ratio="1">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <div class="about-info">
+                              <h2 class="wow fadeInUp" data-wow-delay="0.2s">COMPRAR MEDICINA: </h2>
+                         </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div id="CardMedicina">
+
+                    </div>
+
+                    <script>
+                         function comprotodo() {
+                              if (medlist.length === 0) {
+                                   alert("Por favor seleccione por lo menos una medicina para comprarla!")
+
+                              } else {
+                                   localStorage.setItem("data", JSON.stringify(medlist));
+
+                                   sessionStorage.setItem("buscar2", medlist)
+
+                                   var data = JSON.parse(localStorage.getItem("data"));
+                                   console.log(data)
+
+                                   //var listshow= sessionStorage.buscar
+                                   //var listshowJson=JSON.parse(listshow)
+                                   //console.log(listshow)
+                                   //console.log(listshowJson)
+                                   // La estructura del fetch no cambia, solo cambian los atributos, como el tipo de metodo.
+                                   for (var i = 0; i < data.length; i++) {
+                                        console.log(data[i])
+                                        var AddMed = {
+                                             'Nombre': data[i]
+                                        }
+
+                                   }
+
+
+                                   // ████████████████████████████      FETCH      ████████████████████████
+                                   fetch('https://backend-202000194.herokuapp.com/Pedido', {
+                                        method: 'POST',
+                                        body: JSON.stringify(AddMed),
+                                        headers: {
+                                             'Content-Type': 'application/json',
+                                             'Access-Control-Allow-Origin': '*',
+                                        }
+                                   })
+                                        .then(res => res.json())
+                                        .catch(err => {
+                                             console.error('Error:', err)
+                                             alert("Ocurrio un error, ver la consola")
+                                        })
+                                        .then(response => {
+                                             console.log("RESPUESTA DE LA API")
+                                             console.log(response);
+                                             console.log(response);
+                                             alert(response.Mensaje)
+                                             location.href = "Pedido.html"
+                                             // ObtenerDatos()
+                                        })
+                                   }
+
+                         }
+                    </script>
+
+
+
+
+
+
+
+
+               </div>
+          </div>
+     </section>
+     <!-- FIN DE LA VISUALIZACION Y YA TERMINADO -->
+
+
+     <!-- TODO:GOOGLE MAP -->
+     <section id="google-map">
+          <!-- How to change your own map point
+            1. Go to Google Maps
+            2. Click on your location point
+            3. Click "Share" and choose "Embed map" tab
+            4. Copy only URL and paste it within the src="" field below
+	-->
+          <iframe
+               src="https://maps.google.com/maps?width=100%25&amp;height=1490&amp;hl=en&amp;q=San%20Carlos%20University+(Universidad%20de%20San%20Carlos%20de%20Guatemala)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+               width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+     </section>
+
+
+     <!-- FOOTER -->
+     <footer data-stellar-background-ratio="5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contáctenos</h4>
+                              <p>202000194</p>
+
+                              <div class="contact-info">
+                                   <p><i class="fa fa-phone"></i> +502 57707472</p>
+                                   <p><i class="fa fa-envelope-o"></i> <a
+                                             href="#">3034161730108@ingenieria.usac.edu.gt</a></p>
+                              </div>
+                         </div>
+                    </div>
+                    <!--
+                    <div class="col-md-4 col-sm-4"> 
+                         <div class="footer-thumb"> 
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Ultimas Actualizaciones</h4>
+                              <div class="latest-stories">
+                                   <div class="stories-image">
+                                        <a href="#"><img src="images/news-image.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="stories-info">
+                                        <a href="#"><h5>Amazing Technology</h5></a>
+                                        <span>March 08, 2018</span>
+                                   </div>
+                              </div>
+
+                              <div class="latest-stories">
+                                   <div class="stories-image">
+                                        <a href="#"><img src="images/news-image.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="stories-info">
+                                        <a href="#"><h5>New Healing Process</h5></a>
+                                        <span>February 20, 2018</span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    -->
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <div class="opening-hours">
+                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">Horario de Atención</h4>
+                                   <p>Lunes - Viernes <span>06:00 AM - 10:00 PM</span></p>
+                                   <p>Sabado <span>09:00 AM - 08:00 PM</span></p>
+                                   <p>Domingo <span>Cerrado, es dia de Dios</span></p>
+                              </div>
+
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-4 col-sm-6">
+                              <div class="copyright-text">
+                                   <p>Copyright &copy; 2022 UHospital
+
+                                        | Diseño: El Bootstrap :v</p>
+                              </div>
+                         </div>
+                         <div class="col-md-6 col-sm-6">
+                              <div class="footer-link">
+                                   <a href="https://www.who.int/es">OMS</a>
+                                   <a href="https://www.mspas.gob.gt">MSPAS</a>
+                                   <a href="https://www.gob.pe/minsa/">MINSA</a>
+                                   <a href="https://covid19.who.int">COVID 19 INFO</a>
+                              </div>
+                         </div>
+                         <div class="col-md-2 col-sm-2 text-align-center">
+                              <div class="angle-up-btn">
+                                   <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i
+                                             class="fa fa-angle-up"></i></a>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </footer>
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.sticky.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/wow.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/custom.js"></script>
+
+     <script>
+          function Regresar() {
+               location.href = "index.html"
+          }
+     </script>
+     <script>
+          var estado = ""
+          var idecita = 0
+          function ObtenerDatos() {
+               // La estructura del fetch no cambia, solo cambian los atributos, como el tipo de metodo.
+               var tabla = document.querySelector('#CardMedicina')
+               var titulo = document.querySelector('#tittlepaciente')
+               var cadtitle = ``
+               var cadena = ''
+               var IdUser = sessionStorage.logpaciente
+               cadtitle += `
+                <div>          </div>
+               <!-- SECTION TITLE -->
+               <div class="section-title wow fadeInUp" data-wow-delay="0.1s" style="text-align:center;">
+                    <h1> Bienvenido ${IdUser}</h1>
+               </div>
+
+               `
+               titulo.innerHTML = cadtitle
+
+               // Esta cadena nos servira para escribir los datos en la tabla.
+
+
+               fetch('https://backend-202000194.herokuapp.com/Medicinas', {
+                    method: 'GET',
+                    headers: {
+                         'Content-Type': 'application/json',
+                         'Access-Control-Allow-Origin': '*',
+                    }
+               })
+                    .then(res => res.json())
+                    .catch(err => {
+                         console.error('Error:', err)
+                         alert("Ocurrio un error, ver la consola")
+                    })
+                    .then(response => {
+                         console.log(response);
+                         response.forEach(element => {
+                              console.log(element)
+                              //IdUser=element.Nombre
+                              cadena += `
+                    
+                   
+                   <div class="col-md-3 col-sm-4">
+                         <div class="card-header">
+                              
+                              <h2 >   ${element.Nombre}     Q.  ${element.Precio}</h2>
+                         </div>
+                         <div class="card-body" >
+                              <div class="mx-auto d-block">
+                                   <img class="rounded-circle mx-auto d-block" src="images/medicinacompra.jpg"
+                                        alt="Card image cap">
+                                   <h5 class="text-sm-center mt-2 mb-1"> Disponibilidad:  ${element.Cantidad}</h5>
+                                   <div class="location text-sm-center">
+                                         Descripción:  ${element.Descripcion}
+                                   </div>
+                              </div>
+                              <hr>
+                              <div class="card-text text-sm-center">
+                                   <a  class="item" >
+                                        <button value=${element.Nombre} onclick="AddCesta(this)" type="item" class="btn btn-warning">    Q.  ${element.Precio}</button>
+                                   </a>
+                                   
+     
+                              </div>
+                         </div>
+                    </div>
+                        
+                        `
+                         });
+                         cadena += `<div class="container"><div class="row"> <button onclick="comprotodo()" class="au-btn au-btn--small au-btn--green m-1" type="button">$$$$$$$
+                                    COMPRAR                 $$$$$$$</button> <div/> <div/><div ><div/>`
+                         cadena += ` 
+                         <div > <div/>
+                              <div > <div/>
+                                   <div> <div/>
+               <section >
+               <button value=${IdUser} onclick="ModificarPerfil(this)"  type="button" class="btn btn-primary btn-lg" style="position: rigth;">MODIFICAR PERFIL</button>
+               <section/>
+               `
+                         tabla.innerHTML = cadena 
+                         
+                    })
+                   
+          }
+
+          function EstadodeCita() {
+               // La estructura del fetch no cambia, solo cambian los atributos, como el tipo de metodo.
+               var tabla = document.querySelector('#EstadoCita')
+               var cadena = ''
+               var paciente = sessionStorage.logpaciente
+               fetch(`https://backend-202000194.herokuapp.com/Citas/${paciente}`, {
+                    method: 'GET',
+                    headers: {
+                         'Content-Type': 'application/json',
+                         'Access-Control-Allow-Origin': '*',
+                    }
+               })
+                    .then(res => res.json())
+                    .catch(err => {
+                         console.error('Error:', err)
+                         alert("Ocurrio un error, ver la consola")
+                    })
+                    .then(response => {
+                         console.log(response)
+                         console.log(response.Nombre)
+                         estado = response.Estado
+                         console.log(estado)
+
+                    })
+
+
+               cadena += ` 
+               <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                    <h2>                       Estado de la Cita:</h2>
+               </div>
+               <div style="text-align: right;">
+               <div class="alert alert-warning" role="alert"  style="position: left;" >SU ESTADO DE LA CITA ES:  <a href="#"class="alert-link">${estado}</a>.                                                                                                                                                                                       </div>
+               <div class="bg-info clearfix">
+  <button type="button" class="btn btn-secondary float-left">ESTADO DE LA CITA </button><h2>${estado}                                                                                                                            </h2>
+  <button type="button" class="btn btn-secondary float-right">ESTADO DE LA CITA </button>
+</div>
+               <div/>
+               <div class="alert alert-warning">SU ESTADO DE LA CITA ES:  <a href="#"class="alert-link">${estado}</a>.                                                                                                                                                                                      </div>
+
+              `
+               // Esta cadena nos servira para escribir los datos en la tabla.
+
+
+
+               tabla.innerHTML = cadena
+          }
+
+
+          function HacerCita() {
+               var date = document.querySelector('#date').value
+               var hour = document.querySelector('#hour').value
+               var motivo = document.querySelector('#motivo').value
+               estado = "Pendiente"
+
+               console.log(date.concat("  ", hour))
+               var paciente = sessionStorage.logpaciente
+               var objeto = {
+                    'Nombre': sessionStorage.idecita,
+                    'Idpaciente': paciente,
+                    'Datehour': date.concat("  ", hour),
+                    'Motivo': motivo,
+                    'Estado': estado
+               }
+               idecita=sessionStorage.idecita
+               idecita=parseInt(idecita)
+               idecita++
+               sessionStorage.setItem("idecita",idecita)
+
+               // ████████████████████████████        FETCH      ████████████████████████
+               fetch(`https://backend-202000194.herokuapp.com/Citas`, {
+                    method: 'POST',
+                    body: JSON.stringify(objeto),
+                    headers: {
+                         'Content-Type': 'application/json',
+                         'Access-Control-Allow-Origin': '*',
+                    }
+               })
+                    .then(res => res.json())
+                    .catch(err => {
+                         console.error('Error:', err)
+                         alert("Ocurrio un error, ver la consola")
+                    })
+                    .then(response => {
+
+                         console.log(response);
+                         idecita++
+                         alert(response.Mensaje)
+                         EstadodeCita()
+                         // ObtenerDatos()
+                    })
+
+
+
+               //alert("Se ha registrado con éxito")
+
+          }
+          var medlist = [];
+          function AddCesta(item) {
+               //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄PENDIENTEEEEE▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+               var med = item.value
+
+
+
+
+               if (medlist.length === 0) {
+                    medlist.push(med)
+                    console.log(medlist)
+               } else {
+                    for (var i = 0; i < medlist.length; i++) {
+                         console.log(medlist[i].toString() + "   " + med)
+                         if (medlist[i].toString() === med) {
+                              alert("Ya ha elegido esta medicina por favor elija otra!")
+
+                         } else {
+                              medlist.push(med)
+                              sessionStorage.arraymedicina
+                              var medicina = sessionStorage.arraymedicina
+                              var arraymed = JSON.parse(medicina);
+                              arraymed.push(med)
+                              sessionStorage.setItem("arraymedicina",arraymed)
+                              console.log(medlist)
+                              alert("Se añadió " + med + " a la Cesta")
+                              
+
+                         }
+                    }
+
+
+               }
+
+
+
+               console.log(medlist)
+               
+
+          }
+
+
+          function ModificarPerfil(button) {
+               console.log(button)
+               var usuario = button.value
+               console.log(usuario)
+               sessionStorage.setItem("buscarpanelpaciente", usuario)
+               location.href = "ModificarPerfil_Panel.html"
+          }
+
+     </script>
+
+</body>
+
+</html>

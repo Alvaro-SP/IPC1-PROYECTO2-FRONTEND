@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <title>UH Enfermera</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/animate.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/tooplate-style.css">
+
+</head>
+
+<body onload="guardardoctores()" id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+
+          </div>
+     </section>
+
+
+     <!-- HEADER -->
+     <header>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-5">
+                         <p>BIENVENIDO A UHOSPITAL (Salud para todos)</p>
+                    </div>
+
+                    <div class="col-md-8 col-sm-7 text-align-right">
+                         <span class="phone-icon"><i class="fa fa-phone"></i> 57707472</span>
+                         <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 6:00 AM - 10:00 PM
+                              (Lunes-Viernes)</span>
+                         <span class="email-icon"><i class="fa fa-envelope-o"></i> <a
+                                   href="#">3034161730108@ingenieria.usac.edu.gt</a></span>
+                    </div>
+
+               </div>
+          </div>
+     </header>
+
+
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="index.html" class="navbar-brand"><i class="fa fa-h-square"></i>OSPITAL USAC</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="#top" class="smoothScroll">INICIO</a></li>
+                         <li><a href="#about" class="smoothScroll">Sobre nosotros</a></li>
+                         <li><a href="#team" class="smoothScroll">Doctores</a></li>
+                         <li><a href="#news" class="smoothScroll">Covid 19</a></li>
+                         <li><a href="#google-map" class="smoothScroll">Contacto</a></li>
+                         <li onclick="cerrar()" class="appointment-btn"><a href="#appointment">CERRAR SESIÓN</a></li>
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- HOME -->
+     <section id="home" class="slider" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+                    <h1 style="color: black;">BIENVENIDA ENFERMERA: </h1>
+               </div>
+
+          </div>
+          </div>
+     </section>
+
+
+     <!-- TODO:ACERCA DE  -->
+     <section id="about">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <div class="about-info">
+                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">CITAS PENDIENTES </h2>
+                              <div class="wow fadeInUp" data-wow-delay="0.8s">
+
+                                   <button onclick="CitasPend()" type="button" class="btn btn-danger btn-lg btn-block">
+                                        Listado de Citas Pendientes</button>
+                                   <div>
+                                        <h4> </h4>
+                                   </div>
+                                   <button onclick="CitasAcept()" type="button"
+                                        class="btn btn-success btn-lg btn-block">Listado de Citas Aceptadas</button>
+                              </div>
+                              <div>
+                                   <h4> </h4>
+                              </div>
+                              <figure class="profile wow fadeInUp" data-wow-delay="1s">
+                                   <img src="images/author-image.jpg" class="img-responsive" alt="">
+
+                                   <figcaption>
+                                        <h3>Dr. Alvaro Socop</h3>
+
+                                   </figcaption>
+                              </figure>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+     <section id="about2">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <div class="about2-info">
+                              <h2 class="wow fadeInUp" data-wow-delay="0.6s"> GENERAR FACTURAS: </h2>
+                              <div class="wow fadeInUp" data-wow-delay="0.8s">
+
+                                   <button onclick="GenerarFacturas()" type="button"
+                                        class="btn btn-info btn-lg btn-block"> Ir a Generar Facturas</button>
+                                   <div>
+                                        <h4> </h4>
+                                   </div>
+                                   <!--<button onclick="CitasAcept()" type="button" class="btn btn-success btn-lg btn-block">Listado de Citas Aceptadas</button>-->
+                              </div>
+                              <div>
+                                   <h4> </h4>
+                              </div>
+                              <figure class="profile wow fadeInUp" data-wow-delay="1s">
+                                   <img src="images/enfermeracita.png" class="img-responsive" alt="">
+
+                                   <figcaption>
+                                        <h3>Enfermeras</h3>
+
+                                   </figcaption>
+                              </figure>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+
+
+
+     <!-- TODO:GOOGLE MAP -->
+     <section id="google-map">
+          <!-- How to change your own map point
+            1. Go to Google Maps
+            2. Click on your location point
+            3. Click "Share" and choose "Embed map" tab
+            4. Copy only URL and paste it within the src="" field below
+	-->
+          <iframe
+               src="https://maps.google.com/maps?width=100%25&amp;height=1490&amp;hl=en&amp;q=San%20Carlos%20University+(Universidad%20de%20San%20Carlos%20de%20Guatemala)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+               width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+     </section>
+
+
+     <!-- FOOTER -->
+     <footer data-stellar-background-ratio="5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contáctenos</h4>
+                              <p>202000194</p>
+
+                              <div class="contact-info">
+                                   <p><i class="fa fa-phone"></i> +502 57707472</p>
+                                   <p><i class="fa fa-envelope-o"></i> <a
+                                             href="#">3034161730108@ingenieria.usac.edu.gt</a></p>
+                              </div>
+                         </div>
+                    </div>
+                    <!--
+                    <div class="col-md-4 col-sm-4"> 
+                         <div class="footer-thumb"> 
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Ultimas Actualizaciones</h4>
+                              <div class="latest-stories">
+                                   <div class="stories-image">
+                                        <a href="#"><img src="images/news-image.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="stories-info">
+                                        <a href="#"><h5>Amazing Technology</h5></a>
+                                        <span>March 08, 2018</span>
+                                   </div>
+                              </div>
+
+                              <div class="latest-stories">
+                                   <div class="stories-image">
+                                        <a href="#"><img src="images/news-image.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="stories-info">
+                                        <a href="#"><h5>New Healing Process</h5></a>
+                                        <span>February 20, 2018</span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    -->
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <div class="opening-hours">
+                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">Horario de Atención</h4>
+                                   <p>Lunes - Viernes <span>06:00 AM - 10:00 PM</span></p>
+                                   <p>Sabado <span>09:00 AM - 08:00 PM</span></p>
+                                   <p>Domingo <span>Cerrado, es dia de Dios</span></p>
+                              </div>
+
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-4 col-sm-6">
+                              <div class="copyright-text">
+                                   <p>Copyright &copy; 2022 UHospital
+
+                                        | Diseño: El Bootstrap :v</p>
+                              </div>
+                         </div>
+                         <div class="col-md-6 col-sm-6">
+                              <div class="footer-link">
+                                   <a href="https://www.who.int/es">OMS</a>
+                                   <a href="https://www.mspas.gob.gt">MSPAS</a>
+                                   <a href="https://www.gob.pe/minsa/">MINSA</a>
+                                   <a href="https://covid19.who.int">COVID 19 INFO</a>
+                              </div>
+                         </div>
+                         <div class="col-md-2 col-sm-2 text-align-center">
+                              <div class="angle-up-btn">
+                                   <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i
+                                             class="fa fa-angle-up"></i></a>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </footer>
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.sticky.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/wow.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/custom.js"></script>
+     <script>
+          function CitasPend() {
+
+               location.href = "Citas_Pendientes.html"
+          }
+          function CitasAcept() {
+
+               location.href = "Citas_Aceptadas.html"
+          }
+          function GenerarFacturas() {
+
+               location.href = "GenFacturaNurse.html"
+          }
+          function cerrar() {
+               location.href = "index.html"
+          }
+          //BUSCO LOS DOCTORES CARGADOS EN EL SISTEMA
+          var arraytemp=[]
+          function guardardoctores() {
+               
+               console.log("☻☻☻☻☻☻☻☻☻☻☻☻☻☻☻☻☻INICIOOOOO☻☻☻☻☻☻☻☻☻☻☻☻☻☻☻☻☻☻☻")
+               fetch('https://backend-202000194.herokuapp.com/Doctores', {
+                    method: 'GET',
+                    headers: {
+                         'Content-Type': 'application/json',
+                         'Access-Control-Allow-Origin': '*',
+                    }
+               })
+
+                    .then(res => res.json())
+                    .catch(err => {
+                         console.error('Error:', err)
+                         alert("Ocurrio un error, ver la consola")
+                    })
+                    .then(response => {
+                         //console.log(response);
+
+                         response.forEach(element => {
+                              nombre = element.Nombre + " " + element.Apellido
+                              
+                              arraytemp.push(nombre)
+                              sessionStorage.setItem("doctorestemp", JSON.stringify(arraytemp))
+
+                         });
+                    })
+                    
+               
+               //console.log(sessionStorage.doctorestemp)
+
+          }
+
+
+     </script>
+</body>
+
+</html>

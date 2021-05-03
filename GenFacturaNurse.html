@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <title>UH Facturas Nurse</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/animate.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/tooplate-style.css">
+     <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+     <!-- Vendor CSS-->
+     <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+     <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+     <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+     <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+     <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+     <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+     <!-- Main CSS-->
+     <link href="css/theme.css" rel="stylesheet" media="all">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.2/jspdf.plugin.autotable.js"></script>
+
+</head>
+<!--onload="ObtenerDatos()"-->
+
+<body onload="ObtenerDatos(0)" id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+               <span class="spinner-rotate"></span>
+          </div>
+     </section>
+
+
+     <div id="imprimir">
+          <!-- HEADER -->
+          <header>
+               <div class="container">
+                    <div class="row">
+
+                         <div class="col-md-4 col-sm-5">
+                              <p>BIENVENIDO A UHOSPITAL (Salud para todos)</p>
+                         </div>
+
+                         <div class="col-md-8 col-sm-7 text-align-right">
+                              <span class="phone-icon"><i class="fa fa-phone"></i> 57707472</span>
+                              <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 6:00 AM - 10:00 PM
+                                   (Lunes-Viernes)</span>
+                              <span class="email-icon"><i class="fa fa-envelope-o"></i> <a
+                                        href="#">3034161730108@ingenieria.usac.edu.gt</a></span>
+                         </div>
+
+                    </div>
+               </div>
+          </header>
+
+
+          <!-- MENU -->
+          <section class="navbar navbar-default navbar-static-top" role="navigation">
+               <div class="container">
+
+                    <div class="navbar-header">
+                         <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                              <span class="icon icon-bar"></span>
+                              <span class="icon icon-bar"></span>
+                              <span class="icon icon-bar"></span>
+                         </button>
+
+                         <!-- lOGO TEXT HERE -->
+                         <a href="index.html" class="navbar-brand"><i class="fa fa-h-square"></i>OSPITAL USAC</a>
+                    </div>
+
+
+               </div>
+          </section>
+          <!-- HOME -->
+          <section id="home" class="slider" data-stellar-background-ratio="0.5">
+               <div class="container">
+                    <P> </P>
+                    <div class="row">
+                         <h1 style="color: black; text-align: center;">REGISTRAR EN EL SISTEMA Y GENERAR FACTURA </h1>
+                    </div>
+               </div>
+
+
+
+          </section>
+
+          <!-- LOS DATOS DEL PERFIL SELECCIONADO -->
+          <div class="page-content--bge5">
+               <div class="container">
+                    <div class="login-wrap">
+                         <div class="login-content">
+                              <!--<div class="login-logo">
+                              <a href="#">
+                                   <H2>Datos del Paciente</H2>
+                              </a>
+                         </div>-->
+                              <div id="detalles" class="login-form">
+                                   <form action="" method="post">
+                                        <div class="form-group">
+                                             <label>Fecha</label>
+                                             <input type="date" id="date" name="date" value="date"
+                                                  class="au-input au-input--full">
+
+                                        </div>
+
+
+
+                                        <div class="form-group">
+                                             <label>Paciente</label>
+                                             <input id="paciente" class="au-input au-input--full" type="text"
+                                                  placeholder="Ingresa el nombre del paciente">
+
+                                        </div>
+                                        <!--<div class="form-group" >
+                                        <label>Doctor</label>
+                                        <input id="doctor" class="au-input au-input--full" type="text"
+                                             placeholder="Ingresa el Nombre del doctor ">
+                                   </div>-->
+                                        <div class="form-group">
+                                             <label>Doctores en el Sistema</label>
+                                             <select id="docs" name="docs" class="form-control form-control-lg">
+
+
+                                             </select>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                             <label>Precio de la consulta (Q.)</label>
+                                             <input id="precio" class="au-input au-input--full" type="number"
+                                                  placeholder="Ingresa el Precio de la consulta">
+                                        </div>
+                                        <div class="form-group">
+                                             <label>Costo de Operación (Q.)</label>
+                                             <input id="operacion" class="au-input au-input--full" type="number"
+                                                  placeholder="Ingresa el Costo de Operación ">
+                                        </div>
+                                        <div class="form-group">
+                                             <label>Costo de Internado (Q.)</label>
+                                             <input id="internado" class="au-input au-input--full" type="number"
+                                                  placeholder="Ingresa el Costo de Internado">
+                                        </div>
+                                        <div id="total" class="form-group" style="margin-left: 50%;">
+                                             <label>Total (Q.)</label>
+                                             <input id="totaltext" class="au-input au-input--full" type="number"
+                                                  disabled=»disabled»>
+                                        </div>
+                                        <div>
+                                             <button onclick="ObtenerDatos(1)"
+                                                  class="au-btn au-btn--block au-btn--green m-b-20"
+                                                  type="button">Generar
+                                                  Factura</button>
+                                             <button onclick="regresarvisualpaciente()"
+                                                  class="au-btn au-btn--block au-btn--green m-b-20"
+                                                  type="button">Aceptar y
+                                                  Regresar</button>
+                                             <p></p>
+                                        </div>
+
+                                   </form>
+
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+
+     </div>
+
+
+     </div>
+     <div class="login-logo">
+          <a href="#">
+               <H2> </H2>
+          </a>
+     </div>
+     <div class="login-logo">
+          <a href="#">
+               <H2> </H2>
+          </a>
+     </div>
+     <div class="login-logo">
+          <a href="#">
+               <H2> </H2>
+          </a>
+     </div>
+
+
+
+
+                      
+             
+     <!-- FOOTER -->
+     <footer data-stellar-background-ratio="5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contáctenos</h4>
+                              <p>202000194</p>
+
+                              <div class="contact-info">
+                                   <p><i class="fa fa-phone"></i> +502 57707472</p>
+                                   <p><i class="fa fa-envelope-o"></i> <a
+                                             href="#">3034161730108@ingenieria.usac.edu.gt</a></p>
+                              </div>
+                         </div>
+                    </div>
+                    <!--
+                    <div class="col-md-4 col-sm-4"> 
+                         <div class="footer-thumb"> 
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Ultimas Actualizaciones</h4>
+                              <div class="latest-stories">
+                                   <div class="stories-image">
+                                        <a href="#"><img src="images/news-image.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="stories-info">
+                                        <a href="#"><h5>Amazing Technology</h5></a>
+                                        <span>March 08, 2018</span>
+                                   </div>
+                              </div>
+
+                              <div class="latest-stories">
+                                   <div class="stories-image">
+                                        <a href="#"><img src="images/news-image.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="stories-info">
+                                        <a href="#"><h5>New Healing Process</h5></a>
+                                        <span>February 20, 2018</span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    -->
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <div class="opening-hours">
+                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">Horario de Atención</h4>
+                                   <p>Lunes - Viernes <span>06:00 AM - 10:00 PM</span></p>
+                                   <p>Sabado <span>09:00 AM - 08:00 PM</span></p>
+                                   <p>Domingo <span>Cerrado, es dia de Dios</span></p>
+                              </div>
+
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-4 col-sm-6">
+                              <div class="copyright-text">
+                                   <p>Copyright &copy; 2022 UHospital
+
+                                        | Diseño: El Bootstrap :v</p>
+                              </div>
+                         </div>
+                         <div class="col-md-6 col-sm-6">
+                              <div class="footer-link">
+                                   <a href="https://www.who.int/es">OMS</a>
+                                   <a href="https://www.mspas.gob.gt">MSPAS</a>
+                                   <a href="https://www.gob.pe/minsa/">MINSA</a>
+                                   <a href="https://covid19.who.int">COVID 19 INFO</a>
+                              </div>
+                         </div>
+                         <div class="col-md-2 col-sm-2 text-align-center">
+                              <div class="angle-up-btn">
+                                   <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i
+                                             class="fa fa-angle-up"></i></a>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </footer>
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.sticky.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/wow.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/custom.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+     <script src="papaparse.min.js"></script>
+     <!--OBTENER DATOS PARA MOSTRARLO EN LOS TEXT DE VERPERFIL OKAY O NO OKAY-->
+     <script>
+          var cad = []
+
+          var opcion = 0
+          function ObtenerDatos(wakala) {
+               //guardardoctores()
+               var optdoctortemp = sessionStorage.doctorestemp
+               console.log(optdoctortemp)
+               var optdoctor = JSON.parse(optdoctortemp)
+
+               var docs = document.querySelector('#docs')
+               var tots = document.querySelector('#total')
+               var cadenadocs = ``
+               var cadenatotal = ``
+
+               for (var i = 0; i < optdoctor.length; i++) {
+                    console.log(optdoctor[i])
+                    cadenadocs += `
+                         <option>${optdoctor[i]} </option>                                        
+                         
+                         `
+               }
+               //OBTENGO LOS DATOS DE LOS TEXT
+
+               //var date = document.querySelector('#date').value
+               //var paciente = document.querySelector('#paciente').value
+               //var doctor = document.querySelector('#docs').value
+               //var precio = document.querySelector('#precio').value
+               //var operacion = document.querySelector('#operacion').value
+               //var internado = document.querySelector('#internado').value
+               //console.log(doctor)
+               //precio = parseInt(precio)
+               //operacion = parseInt(operacion)
+               //internado = parseInt(internado)
+               //var totales = precio + operacion + internado
+               // console.log(totales)
+               // document.querySelector('#totaltext').value = totales
+
+if (wakala===1){
+ 
+     var date = document.querySelector('#date').value
+               var paciente = document.querySelector('#paciente').value
+               var doctor = document.querySelector('#docs').value
+               var precio = document.querySelector('#precio').value
+               var operacion = document.querySelector('#operacion').value
+               var internado = document.querySelector('#internado').value
+               console.log(doctor)
+               console.log(doctor.split(" ")[0]) 
+               doctor=doctor.split(" ")[0]
+               precio = parseInt(precio)
+               operacion = parseInt(operacion)
+               internado = parseInt(internado)
+               console.log(date)
+               console.log(paciente)
+               console.log(docs)
+               console.log(precio)
+               console.log(operacion)
+               console.log(internado)
+               var arraytemp=sessionStorage.arraydoctores
+               var arraydoc = JSON.parse(arraytemp)
+               arraydoc.push(doctor)
+               sessionStorage.setItem("arraydoctores",JSON.stringify(arraydoc))
+
+               if ((date=="" || paciente == "" || docs == "" || precio == "" || operacion == "" || internado == "")) {
+                    alert("Por Favor llene todos los campos obligatorios")
+               } else {
+                    
+                    for (var i = 0; i < cad.length; i++) {
+                         cadenadocs += `
+                         <option>${cad[i]} </option>                                        
+                         
+                         `
+                    }
+                    var date = document.querySelector('#date').value
+                    var paciente = document.querySelector('#paciente').value
+                    var doctor = document.querySelector('#docs').value
+                    var precio = document.querySelector('#precio').value
+                    var operacion = document.querySelector('#operacion').value
+                    var internado = document.querySelector('#internado').value
+                    precio = parseInt(precio)
+                    operacion = parseInt(operacion)
+                    internado = parseInt(internado)
+
+                    var totales = precio + operacion + internado
+                    console.log(totales)
+                    cadenatotal = ` <label>Total (Q.)</label>
+                                             <input id="totaltext" class="au-input au-input--full" type="number"
+                                                  disabled=»disabled»>${totales}`
+                    document.querySelector('#totaltext').value = totales
+                    var doctor = document.querySelector('#docs').value
+                    PDFpedido(precio, operacion, internado, totales, date, paciente, doctor)
+                    
+               }
+
+
+
+
+
+             
+               //tots.innerHTML = cadenatotal
+
+}
+               console.log(cadenadocs)
+               docs.innerHTML = cadenadocs
+               opcion++
+
+               console.log(cadenadocs)
+               docs.innerHTML = cadenadocs
+               opcion++
+
+          }
+
+
+
+
+          function regresaradmin() {
+               location.href = "Panel_Admin.html"
+          }
+
+
+
+     </script>
+     <!--EL METODO PARA MODIFICAR -->
+     <script>
+          // METODO MODIFICAR
+          function Modificar() {
+               // Recopilamos la informacion de los objetos de HTML
+               var nombre2 = sessionStorage.buscar
+               var nombre = document.querySelector('#nombre').value
+               console.log("NOMBRE: " + nombre)
+               //var nombre  =document.querySelector('#nombre').value
+               var apellido = document.querySelector('#apellido').value
+               var nacimiento = document.querySelector('#nacimiento').value
+               var sexo = document.querySelector('#sexo').value
+               var username = document.querySelector('#usuario').value
+               var contra = document.querySelector('#contra').value
+
+               var objeto = {
+                    'nombre': nombre,
+                    'apellido': apellido,
+                    'fecha': nacimiento,
+                    'sexo': sexo,
+                    'usuario': username,
+                    'contra': contra
+               }
+               console.log(objeto)
+
+               // La estructura del fetch no cambia, solo la URL donde consume la API y el method.
+               fetch(`https://backend-202000194.herokuapp.com/Pacientes/${nombre2}`, {
+                    method: 'PUT',
+                    body: JSON.stringify(objeto),
+                    headers: {
+                         'Content-Type': 'application/json',
+                         'Access-Control-Allow-Origin': '*',
+                    }
+               })
+                    .then(res => res.json())
+                    .catch(err => {
+                         console.error('Error:', err)
+                         alert("Ocurrio un error, ver la consola")
+                    })
+                    .then(response => {
+                         console.log(response);
+                         alert(response.Mensaje)
+                    })
+
+          }
+
+
+
+          //FUNCION PARA REGRESAR A VISUALIZACION
+          function regresarvisualpaciente() {
+               opcion = 0
+               location.href = "Panel_Nurse.html"
+          }
+
+     </script>
+
+     <script>
+          var n = 1
+
+          function PDFpedido(precio, operacion, internado, totales, date, paciente, doctor) {
+               var pdf = new jsPDF();
+               //pdf.text(20, 20, " REPORTE GENERAL DE PACIENTES");
+               //pdf.text(20, 40, "Vista de Pacientes: ");
+               //var columns = ["No.", "NOMBRE", "PRECIO", "CANTIDAD", "SUBTOTAL"];
+               //pdf.text(20, 20, "DATOS DE PACIENTES: ");
+               var bodytab = document.getElementById("tablapedido");
+               var tabjson = pdf.autoTableHtmlToJson(bodytab);
+               var headerTxt = " UHOSPITAL                                                     FACTURA"
+               var enca1 = "Dirección: 11 Avenida, Cdad. de Guatemala 01012"
+               var enca2 = "2418 8000"
+               //var colfac = ["FACTURAR A: "];
+               //var filfac = [[paciente]];
+               //pdf.autoTable(colfac, filfac);
+
+               pdf.setTextColor(0, 0, 0);
+               //pdf.setFont("helvetica");
+               //pdf.setFontType("bold");
+               pdf.setFontSize(9);
+               pdf.text(20, 20, 'Dirección: 11 Avenida, Cdad. de Guatemala 01012');
+               pdf.text(20, 25, 'Telefono: 2418 8000');
+               pdf.text(20, 30, 'Lugar: Guatemala');
+
+               pdf.setFontSize(12);
+               //FACTURAR A 
+
+               pdf.setDrawColor(0);
+               pdf.setFillColor(51, 153, 255);
+               pdf.rect(20, 35, 80, 8, 'FD'); // filled red square with black borders
+               pdf.setDrawColor(0);
+               pdf.setFillColor(224, 224, 224);
+               pdf.rect(20, 43, 80, 8, 'FD'); // filled red square
+               pdf.setTextColor(255, 255, 255);
+               pdf.text(22, 40, 'FACTURAR A NOMBRE DE:');
+               pdf.setTextColor(0, 0, 0);
+               pdf.text(25, 49, `   ${paciente}`);
+
+
+               //NO FACTURA Y FECHA
+               pdf.setDrawColor(0);
+               pdf.setFillColor(51, 153, 255);
+               pdf.rect(130, 20, 36, 8, 'FD'); // filled red square with black borders
+               pdf.setDrawColor(0);
+               pdf.setFillColor(51, 153, 255);
+               pdf.rect(160, 20, 30, 8, 'FD'); // filled red square with black borders
+               pdf.setTextColor(255, 255, 255);
+               pdf.text(130, 26, 'No. FACTURA');
+               pdf.text(160, 26, '    FECHA');
+
+
+               pdf.setDrawColor(0);
+               pdf.setFillColor(224, 224, 224);
+               pdf.rect(130, 28, 36, 8, 'FD'); // filled red square with black borders
+               pdf.setDrawColor(0);
+               pdf.setFillColor(224, 224, 224);
+               pdf.rect(160, 28, 30, 8, 'FD'); // filled red square with black borders
+               pdf.setTextColor(0, 0, 0);
+               pdf.text(130, 34, `         ${n}`);
+               pdf.text(160, 34, `     ${date}`);
+               //ID CLIENTE Y TÉRMINOS
+               pdf.setDrawColor(0);
+               pdf.setFillColor(51, 153, 255);
+               pdf.rect(130, 40, 30, 8, 'FD'); // filled red square with black borders
+               pdf.setDrawColor(0);
+               pdf.setFillColor(51, 153, 255);
+               pdf.rect(160, 40, 39, 8, 'FD'); // filled red square with black borders
+               pdf.setTextColor(255, 255, 255);
+               pdf.text(130, 46, '  Id CLIENTE');
+               pdf.text(160, 46, '   TÉRMINOS');
+
+               pdf.setDrawColor(0);
+               pdf.setFillColor(224, 224, 224);
+               pdf.rect(130, 48, 30, 8, 'FD'); // filled red square with black borders
+               pdf.setDrawColor(0);
+               pdf.setFillColor(224, 224, 224);
+               pdf.rect(160, 48, 39, 8, 'FD'); // filled red square with black borders
+               pdf.setTextColor(0, 0, 0);
+               pdf.text(130, 54, `         ${n}`);
+               pdf.text(160, 54, `Pago contra entrega`);
+               //TOTAL
+               pdf.setDrawColor(0);
+               pdf.setFillColor(153, 204, 255);
+               pdf.rect(132, 92, 37, 8, 'FD'); // filled red square with black borders
+               pdf.setDrawColor(0);
+               pdf.setFillColor(153, 204, 255);
+               pdf.rect(169, 92, 27, 8, 'FD'); // filled red square with black borders
+
+               pdf.setTextColor(0, 0, 0);
+               pdf.text(132, 98, `       Total:`);
+               pdf.text(169, 98, `    Q. ${totales}`);
+
+
+
+
+               var columns = ["No.", "Descripción", "Cantidad", "Precio Unitario", "Monto"];
+               var data = [
+                    [1, "Costo de la consulta Realizada", 1, precio, precio],
+                    [2, "Costo de la operación Realizada", 1, operacion, operacion],
+                    [3, "Costo del Internado", 1, internado, internado]];
+
+
+
+               var header = function (data) {
+                    pdf.setFontSize(18);
+                    pdf.setTextColor(10);
+                    pdf.setFontStyle('normal');
+                    //doc.addImage(headerImgData, 'JPEG', data.settings.margin.left, 20, 50, 50);
+                    pdf.text(headerTxt, data.settings.margin.left, 10);
+
+               };
+               var options = {
+                    beforePageContent: header,
+                    margin: { top: 15 },
+                    startY: 61// pdf.autoTableEndPosY() + 15
+               };
+               pdf.autoTable(columns, data, options);
+               pdf.save('FACTURA_GENERADA.pdf');
+               n++
+          }
+
+     </script>
+
+     <script>
+
+          function Fecha() {
+               var n = new Date();
+               //Año
+               var y = n.getFullYear();
+               //Mes
+               var m = n.getMonth() + 1;
+               //Día
+               var d = n.getDate();
+               console.log(d + "/" + m + "/" + y)
+               //Lo ordenas a gusto.
+               document.getElementById("#date").innerHTML = d + "/" + m + "/" + y;
+
+
+          }
+
+     </script>
+
+</body>
+
+</html>
