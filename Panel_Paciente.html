@@ -544,7 +544,10 @@
                if (medlist.length === 0) {
                     medlist.push(med)
                     console.log(medlist)
-                         
+                    var medicina = sessionStorage.arraymedicina
+                              var arraymed = JSON.parse(medicina);
+                              arraymed.push(med)
+                              sessionStorage.setItem("arraymedicina",arraymed)
                     alert("Se añadió " + med + " a la Cesta")
                } else {
                     for (var i = 0; i < medlist.length; i++) {
@@ -554,7 +557,7 @@
                               break;
                          } else {
                               medlist.push(med)
-                              sessionStorage.arraymedicina
+                              //sessionStorage.arraymedicina
                               var medicina = sessionStorage.arraymedicina
                               var arraymed = JSON.parse(medicina);
                               arraymed.push(med)
