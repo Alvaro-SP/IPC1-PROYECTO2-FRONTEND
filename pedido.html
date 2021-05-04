@@ -177,7 +177,7 @@
                     //pdf.text(20, 20, "DATOS DE PACIENTES: ");
                     var bodytab = document.getElementById("tablapedido");
                     var tabjson = pdf.autoTableHtmlToJson(bodytab);
-                    var headerTxt = "                       REPORTE GENERAL DE PACIENTES"
+                    var headerTxt = "                       PEDIDO REALIZADO DE MEDICINAS"
                     var header = function (data) {
                         pdf.setFontSize(18);
                         pdf.setTextColor(10);
@@ -191,7 +191,7 @@
                         startY: pdf.autoTableEndPosY() + 15
                     };
                     pdf.autoTable(tabjson.columns, tabjson.data, options);
-                    pdf.save('REPORTE_enfermeras.pdf');
+                    pdf.save('REPORTE_PEDIDO_Medicinas.pdf');
 
                 }
 
@@ -476,7 +476,7 @@
                                             <button value=${element.Nombre} onclick="menos(this, ${precio} , ${cantidad}, ${Subtotal})" type="item" class="item"  data-placement="top" title="MENOS" >
                                                 <i   class="zmdi zmdi-minus-circle"></i>
                                             </button>
-                                            <button value=${element.Nombre} onclick="mas(this)" class="item" data-toggle="tooltip" data-placement="top"
+                                            <button value=${element.Nombre} onclick="mas(this, ${precio} , ${cantidad}, ${Subtotal})" class="item" data-toggle="tooltip" data-placement="top"
                                                 title="MAS"  >
                                                 <i class="zmdi zmdi-plus-circle"></i>
                                             </button>
@@ -701,7 +701,7 @@
                                 <button value=${nam} onclick="menos(this, ${price} , ${cant}, ${sub})" type="item" class="item"  data-placement="top" title="MENOS" >
                                     <i   class="zmdi zmdi-minus-circle"></i>
                                 </button>
-                                <button value=${nam} onclick="mas(this)" class="item" data-toggle="tooltip" data-placement="top"
+                                <button value=${nam} onclick="mas(this, ${price} , ${cant}, ${sub})" class="item" data-toggle="tooltip" data-placement="top"
                                     title="MAS"  >
                                     <i class="zmdi zmdi-plus-circle"></i>
                                 </button>

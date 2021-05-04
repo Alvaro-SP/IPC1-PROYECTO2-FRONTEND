@@ -544,12 +544,14 @@
                if (medlist.length === 0) {
                     medlist.push(med)
                     console.log(medlist)
+                         
+                    alert("Se añadió " + med + " a la Cesta")
                } else {
                     for (var i = 0; i < medlist.length; i++) {
                          console.log(medlist[i].toString() + "   " + med)
                          if (medlist[i].toString() === med) {
                               alert("Ya ha elegido esta medicina por favor elija otra!")
-
+                              break;
                          } else {
                               medlist.push(med)
                               sessionStorage.arraymedicina
